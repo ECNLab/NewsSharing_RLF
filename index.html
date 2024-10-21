@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsSharing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 用户注册页面 -->
+    <div id="registration" class="registration-page">
+        <!-- 添加平台Logo -->
+        <img src="pic/logo.png" alt="平台Logo" class="platform-logo" />
+
+        <h2>“发你所发，享你所想”</h2>
+        <p>请输入您的昵称和性别：</p>
+        
+        <!-- 输入昵称 -->
+        <input type="text" id="nickname" placeholder="昵称" />
+        
+        <!-- 性别输入框 -->
+        <select id="genderSelect" name="gender">
+            <option value="" disabled selected>性别</option>
+            <option value="male">男</option>
+            <option value="female">女</option>
+        </select>
+
+        <!-- 进入平台按钮 -->
+        <button onclick="enterPlatform()">进入平台</button>
+
+    </div>
+
+    <!-- 顶部导航栏 -->
+    <header class="navbar" style="background-image: url('pic/daohanglan.png'); height: 50px; background-size: cover; background-position: center;">
+    </header>
+
+    <!-- 主平台内容 -->
+    <div id="platform" class="container" style="display: none;">
+        <aside class="sidebar_left">
+            <ul>
+                <li>首页</li>
+                <li onclick="featureUnavailable()">好友</li>
+                <li onclick="featureUnavailable()">消息</li>
+                <li onclick="featureUnavailable()">通知</li>
+            </ul>
+        </aside>
+
+        <aside class="sidebar_right">
+            <img src="pic/right_side.png" alt="右侧导航图片" style="width: 100%; height: auto;">
+        </aside>
+
+        <!-- 右侧新闻帖子内容 -->
+        <main class="feed"><!-- 示例新闻1 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#持教师资格证可以全国免费游所有景点”#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 20 次点赞 | 🔄 23 次转发</p>
+            </div>
+            
+            <!-- 示例新闻2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#超八成受访应届毕业生表示求职观念与父母存在分歧#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 1035 次点赞 | 🔄 1122 次转发</p>
+            </div>
+            
+            <!-- 示例新闻3 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#超八成受访应届毕业生表示求职观念与父母存在分歧#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 1033 次点赞 | 🔄 1126 次转发</p>
+            </div>
+            
+            <!-- 示例新闻4 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#轰动欧美！海外科学家公布铁证：中药轻松杀死癌细胞#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 25 次点赞 | 🔄 33 次转发</p>
+            </div>
+            
+            <!-- 示例新闻5 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#无偿献血即将纳入社会征信体系，不献血将影响个人征信 #</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 27 次点赞 | 🔄 33 次转发</p>
+            </div>
+            
+            <!-- 示例新闻6 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#触目惊心，小男孩朝污水井扔燃烧火柴被炸飞#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 1100 次点赞 | 🔄 1267 次转发</p>
+            </div>
+            
+            <!-- 示例新闻7 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#以次充好、退换货难！“618”消费暴露新堵点#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 1045 次点赞 | 🔄 1245 次转发</p>
+            </div>
+            
+            <!-- 示例新闻8 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#上海世博会一女生在世博展览馆被人挤怀孕#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 21 次点赞 | 🔄 12 次转发</p>
+            </div>
+            
+            <!-- 示例新闻9 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#女子坚持无偿献血16年导致身患白血病#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 42 次点赞 | 🔄 46 次转发</p>
+            </div>
+            
+            <!-- 示例新闻10 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#野生动物也“刷脸”， 学者研发动物识别系统助精细管理#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 1233 次点赞 | 🔄 1067 次转发</p>
+            </div>
+            
+            <!-- 示例新闻11 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#一福州男孩因热爱吃方便面被美国名牌学校录取#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 19 次点赞 | 🔄 22 次转发</p>
+            </div>
+            
+            <!-- 示例新闻12 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="pic/user_pic.png" alt="用户头像" class="user-avatar">
+                    <div>
+                        <h3>XXXXXXX</h3>
+                        <p class="post-time">1天前</p>
+                    </div>
+                </div>
+                <p class="post-content">#吸烟人群得肺癌的风险比非吸烟人群显著更高#</p>
+                <p class="post-readmore">查看全文</p>
+                <p class="interaction-count">👍 1088 次点赞 | 🔄 1322 次转发</p>
+            </div>
+            <button id="endBrowsingBtn" class="end-button">结束浏览</button>
+
+            <!-- 弹出消息的容器，初始隐藏 -->
+            <div id="endPopup" class="popup" style="display: none;">
+                <div class="popup-content">
+                    <p>感谢您的浏览！您已结束查看。</p>
+                    <p>现在请复制以下链接到导航栏，进入平台的分享项目</p>
+                    <p>https://research.naodao.com/project</p>
+                    <button id="closePopupBtn">确认并退出平台</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">              
+            <!-- 显示昵称的区域 -->
+            <div id="nicknameContainer" style="text-align: center;">
+                <span id="userNickname"></span>
+            </div>
+      
+            <div class="modal-page" id="page1">
+                <img src="pic/Inst1.png" alt="第一页图片" style="width: 100%; height: auto;">
+                <button onclick="nextPage(1)">下一页</button>
+            </div>
+            <div class="modal-page" id="page2" style="display: none;">
+                <img src="pic/Inst2.png" alt="第二页图片" style="width: 100%; height: auto;">
+                <button onclick="prevPage(2)">上一页</button>
+                <button onclick="nextPage(2)">下一页</button>
+            </div>
+            <div class="modal-page" id="page3" style="display: none;">
+                <img src="pic/Inst3.png" alt="第三页图片" style="width: 100%; height: auto;">
+                <button onclick="prevPage(3)">上一页</button>
+                <button onclick="closeModal()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
